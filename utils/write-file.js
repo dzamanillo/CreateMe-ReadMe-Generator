@@ -1,9 +1,8 @@
-const { rejects } = require("assert");
 const fs = require("fs");
 
-const writeFile = (fileContent) => {
+const writeFile = (fileContent, fileDestination) => {
 	return new Promise((resolve, reject) => {
-		fs.writeFile("./dist/README.md", fileContent, (err) => {
+		fs.writeFile(fileDestination, fileContent, (err) => {
 			if (err) {
 				reject(err);
 				return;
@@ -17,4 +16,4 @@ const writeFile = (fileContent) => {
 	});
 };
 
-module.exports = { writeFile };
+module.exports = writeFile;
