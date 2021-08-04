@@ -1,8 +1,7 @@
-const { prompt } = require("inquirer");
 const inquirer = require("inquirer");
 const fs = require("fs");
-// const generateReadMe = require("./src/page-template.js");
-const { writeFile } = require("./utils/generate-readme.js");
+const writeFile = require("./utils/write-file.js");
+const generateReadMe = require("./src/page-template");
 
 const promptUser = () => {
 	return inquirer.prompt([
@@ -15,6 +14,32 @@ const promptUser = () => {
 					return true;
 				} else {
 					console.log("Please enter a project name.");
+					return false;
+				}
+			},
+		},
+		{
+			type: "input",
+			name: "gitHubName",
+			message: "What is your GitHub username?",
+			validate: (nameInput) => {
+				if (nameInput) {
+					return true;
+				} else {
+					console.log("Please enter username.");
+					return false;
+				}
+			},
+		},
+		{
+			type: "input",
+			name: "email",
+			message: "What is your email address?",
+			validate: (nameInput) => {
+				if (nameInput) {
+					return true;
+				} else {
+					console.log("Please enter email address.");
 					return false;
 				}
 			},
@@ -37,35 +62,27 @@ const promptUser = () => {
 			name: "license",
 			message: "Select license",
 			choices: [
-				"afl-3.0",
-				"apache-2.0",
-				"artistic-2.0",
-				"bsl-1.0",
-				"bsd-2-clause",
-				"bsd-3-clause",
-				"bsd-3-clause-clear",
+				"afl",
+				"apache",
+				"artistic",
+				"bsl",
+				"bsd",
+				"bsd",
+				"bsd",
 				"cc",
-				"cc0-1.0",
-				"cc-by-4.0",
-				"cc-by-sa-4.0",
 				"wtfpl",
-				"ecl-2.0",
-				"eupl-1.1",
-				"agpl-3.0",
+				"ecl",
+				"eupl",
+				"agpl",
 				"gpl",
-				"gpl-2.0",
-				"gpl-3.0",
 				"lgpl",
-				"lgpl-2.1",
-				"lgpl-3.0",
 				"isc",
-				"lppl-1.3c",
-				"ms-pl",
+				"mspl",
 				"mit",
-				"mpl-2.0",
-				"osl-3.0",
+				"mpl",
+				"osl",
 				"postgresql",
-				"ofl-1.1",
+				"ofl",
 				"ncsa",
 				"unlicense",
 				"zlib",
@@ -125,51 +142,7 @@ const promptUser = () => {
 			name: "tests",
 			message: "Please enter testing information.",
 		},
-		{
-			type: "input",
-			name: "questions",
-			message: "Please enter information for reaching out with questions.",
-		},
 	]);
-};
-
-const generateReadMe = (inputArr) => {
-	return `
-
-# ${inputArr.projectName}
-
-![license](https://img.shields.io/badge/license-${inputArr.license}-blue)
-
-## Description 
-
-${inputArr.description}
-
-
-## Table of Contents
-
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-
-
-
-## Installation
-
-${inputArr.installation}
-<br>
-
-> ${inputArr.installationCode}
-
-## Usage 
-
-${inputArr.usage}
-
-
-## Credits
-
-${inputArr.contributors}
-
-    `;
 };
 
 promptUser()
@@ -177,8 +150,7 @@ promptUser()
 		return generateReadMe(userInput);
 	})
 	.then((readMeInfo) => {
-		console.log(readMeInfo);
-		return writeFile(readMeInfo);
+		return writeFile(readMeInfo, "./dist/README.md");
 	})
 	.catch((err) => {
 		console.log(err);
