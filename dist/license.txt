@@ -1,48 +1,3 @@
-
-
-# LJ
-
-![license](https://img.shields.io/badge/license-undefined-blue) [License Information](#license)
-
-## Description 
-
-lj
-
-
-## Table of Contents
-
-* [Installation](#installation)
-* [Usage](#usage)
-* [Questions](#questions)
-* [Credits](#credits)
-* [License](*license)
-
-
-
-## Installation
-
-lj
-<br>
-
-> undefined
-
-## Usage 
-
-lj
-
-
-## Questions
-
-Please feel free to reach out to me on my [GitHub](https://github.com/lj).
-
-You can also email me at lj
-
-## Credits
-
-lj
-
-## License
-
 MIT License
 
 Copyright (c) 2021 Daniel Zamanillo
@@ -64,6 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
-    

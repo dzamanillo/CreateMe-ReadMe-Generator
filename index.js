@@ -1,7 +1,10 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const writeFile = require("./utils/write-file.js");
+const readFile = require("./utils/read-file.js");
 const generateReadMe = require("./src/page-template");
+const util = require("util");
+const path = require("path");
 
 const promptUser = () => {
 	return inquirer.prompt([
@@ -58,35 +61,10 @@ const promptUser = () => {
 			},
 		},
 		{
-			type: "list",
+			type: "input",
 			name: "license",
 			message: "Select license",
-			choices: [
-				"afl",
-				"apache",
-				"artistic",
-				"bsl",
-				"bsd",
-				"bsd",
-				"bsd",
-				"cc",
-				"wtfpl",
-				"ecl",
-				"eupl",
-				"agpl",
-				"gpl",
-				"lgpl",
-				"isc",
-				"mspl",
-				"mit",
-				"mpl",
-				"osl",
-				"postgresql",
-				"ofl",
-				"ncsa",
-				"unlicense",
-				"zlib",
-			],
+			default: license.split(" ")[0],
 		},
 		{
 			type: "input",
@@ -145,11 +123,14 @@ const promptUser = () => {
 	]);
 };
 
+let license = fs.readFileSync("LICENSE", "utf-8");
+
 promptUser()
 	.then((userInput) => {
-		return generateReadMe(userInput);
+		return generateReadMe(userInput, license);
 	})
 	.then((readMeInfo) => {
+		console.log("File Created!");
 		return writeFile(readMeInfo, "./dist/README.md");
 	})
 	.catch((err) => {
