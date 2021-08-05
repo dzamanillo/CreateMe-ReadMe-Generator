@@ -3,8 +3,6 @@ const fs = require("fs");
 const writeFile = require("./utils/write-file.js");
 const readFile = require("./utils/read-file.js");
 const generateReadMe = require("./src/page-template");
-const util = require("util");
-const path = require("path");
 
 const promptUser = () => {
 	return inquirer.prompt([

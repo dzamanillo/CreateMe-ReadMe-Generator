@@ -1,4 +1,7 @@
 const cleanUpLicense = (license) => {
+	if (license === "MIT") {
+		return "MIT";
+	}
 	if (license === "APACHE") {
 		return "Apache%202.0";
 	}
@@ -6,6 +9,12 @@ const cleanUpLicense = (license) => {
 	if (license === "BSD") {
 		return "BSD";
 	}
+
+	if (license === "GPL") {
+		return "GPL";
+	}
+
+	return "No%20License";
 };
 
 const generateReadMe = (inputArr, licenseInfo) => {

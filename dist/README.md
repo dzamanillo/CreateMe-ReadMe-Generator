@@ -1,12 +1,12 @@
 
 
-# LJ
+# lkjs
 
-![license](https://img.shields.io/badge/license-undefined-blue) [License Information](#license)
+![license](https://img.shields.io/badge/license-No%20License-blue) [License Information](#license)
 
 ## Description 
 
-lj
+sf
 
 
 ## Table of Contents
@@ -21,25 +21,25 @@ lj
 
 ## Installation
 
-lj
+sf
 <br>
 
 > undefined
 
 ## Usage 
 
-lj
+sf
 
 
 ## Questions
 
-Please feel free to reach out to me on my [GitHub](https://github.com/lj).
+Please feel free to reach out to me on my [GitHub](https://github.com/sf).
 
-You can also email me at lj
+You can also email me at sf
 
 ## Credits
 
-lj
+sf
 
 ## License
 
