@@ -59,10 +59,10 @@ const promptUser = () => {
 			},
 		},
 		{
-			type: "input",
+			type: "list",
 			name: "license",
 			message: "Select license",
-			default: license.split(" ")[0],
+			choices: ["APACHE", "BSD", "GPL", "MIT", "Other"],
 		},
 		{
 			type: "input",
