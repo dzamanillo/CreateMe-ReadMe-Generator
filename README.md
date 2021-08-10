@@ -12,7 +12,7 @@ CreateMe is a command line application that allows users to create a professiona
 - [Usage](#usage)
 - [Questions](#questions)
 - [Credits](#credits)
-- [License](*license)
+- [License](#license)
 
 ## Installation
 

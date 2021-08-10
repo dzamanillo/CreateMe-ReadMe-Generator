@@ -35,7 +35,7 @@ ${inputArr.description}
 * [Usage](#usage)
 * [Questions](#questions)
 * [Credits](#credits)
-* [License](*license)
+* [License](#license)
 
 
 
