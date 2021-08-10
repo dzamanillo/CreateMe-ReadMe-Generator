@@ -1,31 +1,35 @@
+
+
 # CreateMe
 
-![license](https://img.shields.io/badge/license-MIT-blue)
+![license](https://img.shields.io/badge/license-MIT-blue) 
 
-## Description
+## Description 
 
 CreateMe is a command line application that allows users to create a professional README
 
+
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Questions](#questions)
-- [Credits](#credits)
-- [License](*license)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Questions](#questions)
+* [Credits](#credits)
+* [License](*license)
+
+
 
 ## Installation
-
-[Video](https://drive.google.com/file/d/18MvX5GaKdwfK_Vg0l_-jDDzoWwh3c-3l/view)
 
 You need to have a LICENSE file in your root directory prior to running.
 <br>
 
 > node index.js
 
-## Usage
+## Usage 
 
 IMPORTANT! Please have LICENSE file in root prior to running. Github license templates work best.
+
 
 ## Questions
 
@@ -60,3 +64,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+    
